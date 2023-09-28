@@ -14,12 +14,28 @@
     <form method="POST" action="/add_entry">
         <textarea name="content" rows="4" cols="50" placeholder="Write your entry here..."></textarea>
         <br>
+        <fieldset class="happiness">
+            <legend>
+                Happiness 
+            </legend>
+            <label
+          ><input type="radio" name="happiness" value="🙂" checked />🙂
+          Happy</label
+        >
+        <label
+          ><input type="radio" name="happiness" value="😐" />😐 Bored</label
+        >
+        <label><input type="radio" name="happiness" value="🙁" />🙁 Sad</label>
+        </fieldset>
         <button type="submit">Add Entry</button>
     </form>
     <h2>Entries:</h2>
     <ul>
         {% for entry in entries %}
-        <li>{{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }} - {{ entry.content }}</li>
+        <li>
+            {{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }} - {{ entry.content
+            }} - {{ entry.happiness }}
+        </li>
         {% endfor %}
     </ul>
 
