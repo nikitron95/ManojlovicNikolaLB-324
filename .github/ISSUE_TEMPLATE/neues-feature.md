@@ -1,5 +1,5 @@
 ---
-name: Custom issue template
+name: Neues feature
 about: Describe this issue template's purpose here.
 title: ''
 labels: Funktionale Anforderung, Qualitätsanforderung, Randanforderung
